@@ -1,10 +1,10 @@
 package com.sorting.geeks;
 
-public class QuickSort {
+public class QuickSortArray {
 
 	public static void main(String[] args) {
 		int[] arr = {4,3,2,1,0};
-		QuickSort q = new QuickSort(); 
+		QuickSortArray q = new QuickSortArray(); 
 		System.out.print("Before sorting : ");
 		q.printArr(arr);
 		q.quickSort(arr, 0, arr.length-1);

@@ -1,6 +1,6 @@
 package com.sorting.geeks;
 
-public class MergeSort {
+public class MergeSortArray {
 	
 //	Merge Sort	is a Divide and	Conquer algorithm.
 //	It divides input array in two halves, calls itself for the two halves and then merges
@@ -15,7 +15,7 @@ public class MergeSort {
 
 	public static void main(String[] args) {
 		int arr[] = {4,3,2,1,0};
-		MergeSort m = new MergeSort();
+		MergeSortArray m = new MergeSortArray();
 		System.out.print("Before sorting : ");
 		m.printArr(arr);
 		m.mergeSort(arr, 0, arr.length-1);
