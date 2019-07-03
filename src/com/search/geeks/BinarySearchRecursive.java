@@ -1,6 +1,6 @@
-package com.sorting.geeks;
+package com.search.geeks;
 
-public class BinarySearch {
+public class BinarySearchRecursive {
 	
 //		The time complexity of Binary Search can be written as
 //		T(n) = T(n/2) + c 
@@ -11,6 +11,10 @@ public class BinarySearch {
 	public static void main(String[] args) {
 		int[] arr = {0,1,2,3,4};
 		int index = binarySearch(arr, 0, arr.length-1, 1);
+		if (index == -1) 
+            System.out.println("Element not present"); 
+        else
+            System.out.println("Element found at index " + index); 
 		System.out.println("searching 2 in arr, index found is "+index);
 	}
 
@@ -28,5 +32,6 @@ public class BinarySearch {
 			return binarySearch(arr, startIndex, mid-1, search);
 		}
 	}
+
 
 }
