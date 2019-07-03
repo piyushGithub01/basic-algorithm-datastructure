@@ -1,4 +1,4 @@
-package com.ce.algo1.week1.lession1;
+package com.unionfind.ce.algo1.week1;
 
 import java.util.Scanner;
 
