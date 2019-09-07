@@ -1,0 +1,116 @@
+A graph is a set of vertices and a collection of edges that each connect a pair of vertices.
+
+A self-loop is an edge that connects a vertex to itself.
+
+Two edges that connect the same pair of vertices are parallel
+
+When there is an edge connecting two vertices, we say that the vertices are a djacent
+to one another and that the edge is incident to both vertices
+
+The degree of a vertex is the number of edges incident to it.
+
+A subgraph is a subset of a graph’s edges (and associated vertices) that constitutes a graph.
+
+A path in a graph is a sequence of vertices connected by edges. 
+
+A simple path is one with no repeated vertices. 
+
+A cycle is a path with at least one edge whose first and last vertices are the same. 
+
+A simple cycle is a cycle with no repeated edges or vertices (except the requisite repetition of the first and last vertices). 
+
+The length of a path or a cycle is its number of edges.
+
+A graph is connected if there is a path from every vertex to every other vertex in the graph. 
+
+A graph that is not connected consists of a set of connected components, which are maximal connected subgraphs
+
+An acyclic graph is a graph with no cycles. 
+Several of the algorithms that we consider are concerned with finding acyclic subgraphs of a given graph that satisfy certain properties.
+
+A tree is an acyclic connected graph. 
+A disjoint set of trees is called a forest. 
+A spanning tree of a connected graph is a subgraph that contains all of that graph’s vertices and is a single tree. 
+A spanning forest of a graph is the union of spanning trees of its connected components.
+
+The density of a graph is the proportion of possible pairs of vertices that are connected by edges. 
+A sparse graph has relatively few of the possible edges present;
+a dense graph has relatively few of the possible edges missing. 
+Generally, we think of a graph as being sparse if its number of different edges is within a small constant factor of V and as being
+dense otherwise.
+
+A bipartite graph is a graph whose vertices we can divide into two sets
+such that all edges connect a vertex in one set with a vertex in the other
+set.
+
+
+Graph Representation
+
+An adjacency matrix, 
+where we maintain a V-by-V boolean array, with the entry in row v and column w defined to be true if there is an edge adjacent
+to both vertex v and vertex w in the graph, and to be false otherwise. This representation fails on the first count— 
+graphs with millions of vertices are common and the space cost for the V 2 boolean values needed is prohibitive.
+
+An array of edges, 
+using an Edge class with two instance variables of type int. This direct representation is simple, but it fails on the second count—
+implementing adj() would involve examining all the edges in the graph.
+
+An array of adjacency lists, 
+where wemaintain a vertex-indexed array of lists of the vertices adjacent to each vertex.
+Graph implementation achieves the following performance characteristics:
+- Space usage proportional to V + E
+- Constant time to add an edge
+- Time proportional to the degree of v to iterate through vertices adjacent to v
+(constant time per adjacent vertex processed)
+
+DFS marks all the vertices connected to a given source in time proportional to the sum of their degrees
+
+DFS based
+Connectivity. Given a graph, support queries of the form Are two given vertices
+connected ? and How many connected components does the graph have ?
+Are two given vertices connected?
+Single-source paths. Given a graph and a source vertex s, support queries of the
+form Is there a path from s to a given target vertex v? If so, find such a path
+
+BFS
+For any vertex v reachable from s, BFS computes a shortest path
+from s to v (no path from s to v has fewer edges).
+
+Single-source shortest paths. Given a graph and a source vertex s, support queries
+of the form Is there a path from s to a given target vertex v? If so, find a shortest
+such path (one with a minimal number of edges).
+
+BFS takes time proportional to V + E in the worst case.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

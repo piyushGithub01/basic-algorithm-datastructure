@@ -7,6 +7,7 @@ import java.util.List;
 public class GraphAdjList {
 	
 	private final int vertexCount;
+	private int edgeCount;
 	private List<Integer> adj[];
 	
 	public GraphAdjList(int vertexCount) {
@@ -20,6 +21,7 @@ public class GraphAdjList {
 	public void addEdge(int v, int w) {
 		adj[v].add(w);
 		adj[w].add(v);
+		edgeCount++;
 	}
 	
 	public List<Integer> getAdjListOf(int v) {
@@ -28,5 +30,9 @@ public class GraphAdjList {
 	
 	public int getVertexCount() {
 		return this.vertexCount;
+	}
+	
+	public int getEdgeCount() {
+		return edgeCount;
 	}
 }
