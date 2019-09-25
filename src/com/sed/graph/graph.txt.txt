@@ -64,6 +64,8 @@ Graph implementation achieves the following performance characteristics:
 (constant time per adjacent vertex processed)
 
 DFS marks all the vertices connected to a given source in time proportional to the sum of their degrees
+DFS uses preprocessing time and space proportional to V+E to
+support constant-time connectivity queries in a graph
 
 DFS based
 Connectivity. Given a graph, support queries of the form Are two given vertices
@@ -81,6 +83,58 @@ of the form Is there a path from s to a given target vertex v? If so, find a sho
 such path (one with a minimal number of edges).
 
 BFS takes time proportional to V + E in the worst case.
+
+
+1. find all connected vertices from a starting point - DFS
+DFS marks all vertices connected to a given source in time propotional to the sum of their degrees	
+
+2. find path from source s to vertex v - DFS
+DFS with a union find kind of array startinf from source s, mark the adjuscent vertex root as s and keep doing for all.
+at same time mark boolean visited array as true for vertex traversed.
+if a node is visited it means it is connected, now use root array to find path from vertex v to source s using union find
+DFS allow us to provide conned path to from a given source in time propotional to its length
+
+3. shortest path from vertex v to source s - BFS
+use Queue for BFS, use boolean visited array and root array to union find the shortest path 
+For any vertex v reachable from source s, BFS computes the shortest path from s to v
+
+BFS takes time proportional to V + E in the worst case.
+
+4. Connected componentes/ sub graphs - DFS
+use DFS, boolean visited array, id array and count++
+DFS for every vertex in graph
+
+4. is graph acyclic - DFS
+
+5. is graph bipartite - DFS
+using boolean color array
+
+
+
+
+Symbol table
+has a hashmap for string to its int index map
+has a String ayyar where by int index you can get String name
+has a graph which uses name to find index and index to find name using above hashmap and String array
+
+
+Degrees of Separation
+one of the classic application of graph application is to find degree of separation between two individuals in a social network
+
+
+A knows B, B knows C - so considering A as 0th level, B has got level 1 and C has got level 2
+C knows D, but D directly knows A - so D has got level 1
+
+Degree of Separation is about shortest path from source to destination so - BFS
+
+
+
+Directed Graphs
+
+in directed graphs: edges are one way, the pair of vertices thast defined as edge is an ordered pair that specifies a one way adjacency
+
+A Directed graph or a digraph is a set of vertices and a collection of directed edges.
+Each directed edge connects an ordered pair of vertices
 
 
 
