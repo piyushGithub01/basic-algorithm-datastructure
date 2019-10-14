@@ -134,7 +134,198 @@ Directed Graphs
 in directed graphs: edges are one way, the pair of vertices thast defined as edge is an ordered pair that specifies a one way adjacency
 
 A Directed graph or a digraph is a set of vertices and a collection of directed edges.
-Each directed edge connects an ordered pair of vertices
+Each directed edge connects an ordered pair of vertices.
+
+the outdegree of vertex in a directed graph is number of edged going out of from it,
+the indegree of vertex is the number of edges coming in to it
+
+The first vertex in a directed edge is called its head, the second vertex is called its tail.
+
+We draw directed edge as arraows pointing from head to tail
+
+there are four different ways in which two vertices might be related in a directed graph
+v->w from v to w; an edge w->v from w to v; or two edges v->w and w->v indicating connections in both directions
+
+A directed path in a digraph is a sequence of vertices in which there is
+a (directed) edge pointing from each vertex in the sequence to its successor in the
+sequence. 
+A directed cycle is a directed path with at least one edge whose first and
+last vertices are the same. 
+A simple cycle is a cycle with no repeated edges or vertices
+(except the requisite repetition of the first and last vertices). The length of a path or
+a cycle is its number of edges
+
+
+Reachability in digraphs
+Single-source reachability. Given a digraph and a source vertex s, support queries
+of the form Is there a directed path from s to a given target vertex v?
+DireectedDFS
+
+Multiple-source reachability. Given a digraph and a set of source vertices, support
+queries of the form Is there a directed path from any vertex in the set to a given
+target vertex v?
+DirectedDFS
+
+DFS marks all the vertices in a digraph reachable from a given set of
+sources in time proportional to the sum of the outdegrees of the vertices marked
+
+Mark-and-sweep garbage collection. An important
+application of multiple-source reachability
+is found in typical memory-management
+systems, including many implementations of
+Java. A digraph where each vertex represents
+an object and each edge represents a reference
+to an object is an appropriate model for the
+memory usage of a running Java program. At
+any point in the execution of a program, certain
+objects are known to be directly accessible, and
+any object not reachable from that set of objects
+can be returned to available memory. A markand-
+sweep garbage collection strategy reserves
+one bit per object for the purpose of garbage
+collection, then periodically marks the set of
+potentially accessible objects by running a digraph
+reachability algorithm like DirectedDFS
+and sweeps through all objects, collecting the
+unmarked ones for use for new objects.
+
+Single-source directed paths. Given a digraph and a source vertex s, support
+queries of the form Is there a directed path from s to a given target vertex v? If so,
+find such a path
+DFS
+DepthFirstDirectedPaths 
+
+Single-source shortest directed paths. Given a digraph and a source vertex s,
+support queries of the form Is there a directed path from s to a given target vertex
+v? If so, find a shortest such path (one with a minimal number of edges).
+BFS
+BreadthFirstDirectedPaths
+
+
+Precedence-constrained scheduling. Given a set of jobs to be completed, with
+precedence constraints that specify that certain jobs have to be completed before
+certain other jobs are begun, how can we schedule the jobs such that they are all
+completed while still respecting the constraints?
+
+Topological sort. Given a digraph, put the vertices in
+order such that all its directed edges point from a vertex
+earlier in the order to a vertex later in the order (or
+report that doing so is not possible).
+
+Cycles in digraphs. If job x must be completed before job y, job y before job z, and
+job z before job x, then someone has made a mistake, because those three constraints
+cannot all be satisfied. In general, if a precedence-constrained scheduling problem has
+a directed cycle, then there is no feasible solution.
+
+Directed cycle detection. Does a given digraph have a directed cycle? If so, find
+the vertices on some such cycle, in order from some vertex back to itself.
+
+
+A directed acyclic graph (DAG) is a digraph with no directed cycles
+
+
+Is a given digraph a DAG ? Developing a depth-first-search-based solution to this problem
+is not difficult, based on the fact that the recursive call stack maintained by the system
+represents the “current” directed path under consideration
+
+When executing dfs(G, v), we have followed a directed path from the source to v. To
+keep track of this path, DirectedCycle maintains a vertex-indexed array onStack[]
+that marks the vertices on the recursive call stack (by setting onStack[v] to true
+on entry to dfs(G, v) and to false on exit). DirectedCycle also maintains an
+edgeTo[] array so that it can return the cycle when it is detected, in the same way as
+DepthFirstPaths
+
+Depth-first orders and topological sort. Precedence-constrained scheduling amounts
+to computing a topological order for the vertices of a DAG
+
+A digraph has a topological order if and only if it is a DAG
+
+Three vertex orderings are
+of interest in typical applications:
+¦ Preorder : Put the vertex on a queue before the recursive calls.
+¦ Postorder : Put the vertex on a queue after the recursive calls.
+¦ Reverse postorder : Put the vertex on a stack after the recursive calls.
+
+
+Reverse postorder in a DAG is a topological sort.
+
+With DFS, we can topologically
+sort a DAG in time proportional to V + E
+
+
+
+
+Strong connectivity in digraphs
+
+In an undirected
+graph, two vertices v and w are connected if there is a path connecting
+them—we can use that path to get from v to w or to get from w to v. In
+a digraph, by contrast, a vertex w is reachable from a vertex v if there is
+a directed path from v to w, but there may or may not be a directed path
+back to v from w.
+
+Two vertices v and w are strongly connected if they are
+mutually reachable: that is, if there is a directed path from v to w
+and a directed path from w to v. 
+A digraph is strongly connected if all
+its vertices are strongly connected to one another.
+
+
+two vertices are strongly connected if and only if there exists a
+general directed cycle that contains them both
+
+A digraph with V vertices
+has between 1 and V strong components
+
+a strongly connected digraph has 1 strong component and a DAG has V strong components
+
+
+
+A quadratic algorithm to compute strong components is not difficult to develop 
+, but (as usual) quadratic time and space requirements are prohibitive
+for huge digraphs that arise in practical applications
+
+
+Kosaraju’s algorithm
+
+the implementation
+KosarajuSCC on the facing page does the job with just a few lines of code
+added to CC, as follows:
+¦ Given a digraph G, use DepthFirstOrder to compute the reverse postorder of
+its reverse, G R.
+¦ Run standard DFS on G, but consider the unmarked vertices in the order just
+computed instead of the standard numerical order.
+¦ All vertices reached on a call to the recursive dfs() from the constructor are in a
+strong component (!), so identify them as in CC.
+
+
+
+In a DFS of a digraph G where marked vertices are considered in
+reverse postorder given by a DFS of the digraph’s reverse G R (Kosaraju’s algorithm),
+the vertices reached in each call of the recursive method from the constructor are
+in a strong component.
+
+
+
+Strong connectivity. Given a digraph, support queries of the form: Are two given
+vertices strongly connected ? and How many strong components does the digraph
+have ?
+
+Kosaraju’s algorithm uses preprocessing time and space proportional
+to V + E to support constant-time strong connectivity queries in a digraph.
+
+
+
+The transitive closure of a digraph
+G is another digraph with the same set of vertices,
+but with an edge from v to w in the transitive
+closure if and only if w is reachable from
+v in G.
+
+
+
+
+
 
 
 
