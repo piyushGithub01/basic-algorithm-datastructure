@@ -1,3 +1,25 @@
+1. Undirected Graph - DS - Adjacency list
+					- DS - Adjacency Matrix
+					- DS - Adjacency Edge
+2. Connectivity in Undiredted Graph - DFS
+3. Finding path from Source S to V - DFS
+4. Shortest path from Source S to V - BFS
+5. Connected Components in Undirected Graph - DFS for each of node
+6. Acyclic Graph - no cycle - DFS
+7. Bi-partite graph - DFS
+8. Symbol Graph - DS
+9. Degree of Separation - BFS
+10. Directed Graph - DS
+11. Reversing the Graph
+12. Rechability in Graph - DirectedDFS
+13. Cycle in DiGraph - DirectedCycle using DirectedDFS
+14. Depth First Order - PreOrder, PostOrder, ReversePostOrder
+15. Topological Sort - Combine DirectedCycle and DepthFirstOrder ReversePostOrder
+16. Strong Connecte Component in Digraph - Kosaraju's Algorithm
+
+
+
+
 A graph is a set of vertices and a collection of edges that each connect a pair of vertices.
 
 A self-loop is an edge that connects a vertex to itself.
@@ -324,6 +346,53 @@ v in G.
 
 
 
+
+Minimum spanning tree
+
+Recall that a spanning tree of a graph is a
+connected subgraph with no cycles that includes all
+the vertices. A minimum spanning tree (MST ) of an
+edge-weighted graph is a spanning tree whose weight
+(the sum of the weights of its edges) is no larger than
+the weight of any other spanning tree.
+
+Assumptions.
+The graph is connected. The spanning-tree condition in
+our definition implies that the graph must be connected
+for an MST to exist. If a graph is not connected, we can adapt our
+algorithms to compute the MSTs of each of its connected
+components, collectively known as a minimum
+spanning forest
+The edge weights are not necessarily distances.
+The edge weights may be zero or negative.
+The edge weights are all different.
+
+
+A cut of a graph is a partition of its vertices into two nonempty disjoint
+sets. A crossing edge of a cut is an edge that connects a vertex in one set with a vertex
+in the other.
+
+( Cut property) Given any cut in an edgeweighted
+graph, the crossing edge of minimum weight is in
+the MST of the graph.
+
+
+a Euclidean graph, whose vertices are points in the plane and whose
+edges are lines connecting them with weights equal to their Euclidean distances.
+
+
+
+
+first MST method, known as Prim’s algorithm, is to attach
+a new edge to a single growing tree at each step. Start with any vertex as a single-vertex
+tree; then add V - 1 edges to it, always taking next (coloring black) the minimumweight
+edge that connects a vertex on the tree to a vertex not yet
+on the tree (a crossing edge for the cut defined by tree vertices).
+
+
+The lazy version of Prim’s algorithm uses space proportional to E
+and time proportional to E log E (in the worst case) to compute the MST of a connected
+edge-weighted graph with E edges and V vertices.
 
 
 

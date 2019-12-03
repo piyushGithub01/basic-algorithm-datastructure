@@ -1,0 +1,88 @@
+Data Structure
+
+Array
+1. rotate array by n position
+2. find two number that add up to n
+3. merge two sorted array - array(m + n extra space) and array(n)n
+4. dutch flag problem - 0s 1s 2s together
+
+
+Linked List
+1. inserion in sorted linked list
+2. deletion in sorted linked list
+3. remove duplicates from sorted linked list
+4. reverse a linked list - iteration
+5. reverse a lionked list - recursive
+6. find middle value in linked list
+7. return n th node from end
+8. detect a loop in linked list
+
+
+
+Graph
+1. DFS																	
+2. BFS																	
+3. connected nodes from a source - DFS									
+4. sub graphs in graph - DFS											
+5. shorted path between nodes - BFS										
+6. acyclic graph - DFS													
+7. bipartite graph - DFS												
+8. directed - reverse a graph
+9. topological sort a graph
+
+
+Tree
+1. tree traversal - pre
+2. tree traversal - inorder
+3. tree traversal - post order
+4. tree traversal - level order
+5. tree traversal - reverse level order
+
+
+
+Matrix 
+1. sorted matrix search
+2. path counts from top to bottom - DFS	
+3. path counts from top to bottom - DP	
+4. path counts with hurdle from top to bottom - DFS	
+5. path counts with hurdle from top to bottom - DP	
+6. search a word/pattern in matrix - using DFS	
+7. min/max path sum from top to bottom - using DFS
+8. min/max path sum from top to bottom - using DP
+
+
+Binary Search Tree
+
+
+
+Heap
+
+
+
+Stack
+
+
+
+Queue 
+
+
+
+
+
+
+
+Algorithm
+
+Recursion
+
+
+Union Find
+
+
+Backtracking
+
+
+DP
+
+
+
