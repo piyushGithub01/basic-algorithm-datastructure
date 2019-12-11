@@ -5,17 +5,45 @@ Array
 2. find two number that add up to n
 3. merge two sorted array - array(m + n extra space) and array(n)n
 4. dutch flag problem - 0s 1s 2s together
-
+5.
+6.
+7.
+8.
+9.
 
 Linked List
 1. inserion in sorted linked list
 2. deletion in sorted linked list
 3. remove duplicates from sorted linked list
 4. reverse a linked list - iteration
-5. reverse a lionked list - recursive
+5. reverse a linked list - recursive
 6. find middle value in linked list
 7. return n th node from end
 8. detect a loop in linked list
+
+
+Stack
+1. balanced paranthesis expression
+2. duplicate parenthesis
+3. evaluate postfix expression
+4. decode increasing decreasing sequence
+5. Min Stack using 2 stacks main and aux
+6. 2 stack in single array
+7. sort a stack using recursion
+8.
+9.
+
+
+Queue
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
 
 
 
@@ -39,6 +67,31 @@ Tree
 5. tree traversal - reverse level order
 
 
+Binary Tree
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+
+
+
+Binary Search Tree
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+
+
 
 Matrix 
 1. sorted matrix search
@@ -51,38 +104,276 @@ Matrix
 8. min/max path sum from top to bottom - using DP
 
 
-Binary Search Tree
-
 
 
 Heap
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
 
 
 
-Stack
+Hashing
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+
+
+String
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
 
 
 
-Queue 
+Trie
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
 
 
 
+Bit Manipulation
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
 
+
+
+Advanced
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
 
 
 
 Algorithm
 
+
 Recursion
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+
+
+
+Divide & Conquer
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+
+
+
+Searching 
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+
+
+
+Sorting
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+
+
+
+Pattern Searching
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+
+
+
+Geometric
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+
+
+
+Randonized
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+
 
 
 Union Find
+1. Quick Find
+2. Quick Union
+3. Quick Union Path Compression
+4. Quick Union Weighted Union
+5. Quick Union Path Compression Weighted Union
+
 
 
 Backtracking
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+
+
+
+
+Greedy
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+
 
 
 DP
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+
+
+
+Branch and Bound
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
