@@ -11,6 +11,7 @@ Array
 8.
 9.
 
+
 Linked List
 1. inserion in sorted linked list
 2. deletion in sorted linked list
@@ -48,15 +49,26 @@ Queue
 
 
 Graph
-1. DFS																	
+1. DFS			
 2. BFS																	
 3. connected nodes from a source - DFS									
-4. sub graphs in graph - DFS											
-5. shorted path between nodes - BFS										
-6. acyclic graph - DFS													
-7. bipartite graph - DFS												
-8. directed - reverse a graph
-9. topological sort a graph
+4. sub graphs in graph - DFS
+5. connected components in graph - DFS											
+6. shorted path between nodes - BFS										
+7. acyclic graph - DFS													
+8. bipartite graph - DFS												
+9. directed - reverse a graph
+10. rechability in digraph - Directed DFS
+11. Directed cycle in graph - directed-acyclic - Directed DFS
+12. Depth first orders in digraphs - preorder, postorder, reverse postorder - Directed DFS
+13. Topological sorting - directed acyclic + reverse post order - DFS
+14. KOSARAJU's Strong connectivity in Digraph - Directed DFS on (reverse post order of (reverse of original directed graph)) 
+15. Edge - compareTo based on weight of edge
+16. EdgeWeightedGraph
+17. Prim's MST algo - lazy	(presented by V. Jarnik in 1939, by R. Prim in 1961 and, independently, by E. W. Dijkstra soon thereafter)
+18. Prim's MST algo - eager
+19. Kruskal's MST algo - UF 
+
 
 
 Tree
@@ -81,28 +93,73 @@ Binary Tree
 
 
 Binary Search Tree
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
+1. insert in a BST
+https://www.techiedelight.com/insertion-in-bst/
+2. search in BST
+https://www.techiedelight.com/search-given-key-in-bst/
+3. construct balanced BST from keys - recursive with index mid
+https://www.techiedelight.com/construct-balanced-bst-given-keys/
+4. validate BST recursively with min max
+https://www.techiedelight.com/determine-given-binary-tree-is-a-bst-or-not/
+5. compare if two arrays are same BST - sub array compare
+https://www.techiedelight.com/check-given-keys-represents-same-bsts-not-without-building-bst/
+6. in order predessor - recursive and iterative - if left exists then max of left - else prev root
+https://www.techiedelight.com/find-inorder-predecessor-given-key-bst/
+7. LCA of two nodes in BST - using MIN and MAX compared against Root node
+https://www.techiedelight.com/find-lowest-common-ancestor-lca-two-nodes-bst/
+8. k th smallest and largest element in BST - using in order traversal
+https://www.techiedelight.com/find-kth-smallest-largest-element-bst/ 
+9. 
 
 
 
 Matrix 
 1. sorted matrix search
+https://www.programcreek.com/2013/01/leetcode-search-a-2d-matrix-java/
+https://www.programcreek.com/2014/04/leetcode-search-a-2d-matrix-ii-java/
 2. path counts from top to bottom - DFS	
 3. path counts from top to bottom - DP	
+https://www.programcreek.com/2014/05/leetcode-unique-paths-java/
 4. path counts with hurdle from top to bottom - DFS	
 5. path counts with hurdle from top to bottom - DP	
+https://www.programcreek.com/2014/05/leetcode-unique-paths-ii-java/
+5. path count - using BACKTRACKING
+https://www.techiedelight.com/find-total-number-unique-paths-maze-source-destination/
 6. search a word/pattern in matrix - using DFS	
 7. min/max path sum from top to bottom - using DFS
+https://www.programcreek.com/2014/05/leetcode-minimum-path-sum-java/
 8. min/max path sum from top to bottom - using DP
+https://www.programcreek.com/2014/05/leetcode-minimum-path-sum-java/
+9. knight move in matrix - BACKTRACKING
+10. quene placement in matrix - BACKTRACKING
+11. shortest path steps for knight in matrix - BFS with node equals
+12. print spiral matrix - use 4 for loops and 4 pointers
+similar approach for create spiral matrix out of a given array
+similar approach for move elements in spiral order by 1
+https://www.techiedelight.com/print-matrix-spiral-order/
+13. shortest/longest path in matrix from source to destination - BACKTRACKING
+https://www.techiedelight.com/find-shortest-path-in-maze/
+https://www.techiedelight.com/find-longest-possible-route-matrix/
+14. find all paths fro top to bottom - BACKTRACKING
+https://www.techiedelight.com/find-all-paths-from-source-to-destination-in-matrix/
+15. find bottom with constraint of movement - BACKTRACKING
+https://www.techiedelight.com/find-path-source-destination-matrix-satisfies-given-constraints/
+16. shortest path to bottom with contraints - BFS
+https://www.techiedelight.com/find-shortest-path-source-destination-matrix-satisfies-given-constraints/
+17.cost based path finding in matrix - RECURSION & DFS
+https://www.techiedelight.com/counting-paths-on-grid-to-reach-destination-cell/
+18. longest consecutive character - recursion 
+https://www.techiedelight.com/find-length-longest-path-matrix-consecutive-characters/
+19. Number of island - UNION FIND
+https://www.programcreek.com/2014/04/leetcode-number-of-islands-java/
+20. Number of island - BFS
+https://www.techiedelight.com/count-the-number-of-islands/
+21. probability of survival on moves - DP
+https://www.techiedelight.com/probability-alive-after-taking-n-steps-island/
+22. common elements in matrix in all rows - DP - Simple Map
 
+
+https://www.techiedelight.com/find-common-elements-present-rows-matrix/
 
 
 
